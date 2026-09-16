@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Property {
+  id           Int      @id @default(autoincrement())
+  title        String
+  location     String
+  propertyType String
+  monthlyRent  Decimal
+  bedrooms     Int
+  description  String
+  contactName  String
+  contactEmail String
+  createdAt    DateTime @default(now())
+  status       String   @default("PENDING")
+  imageUrl     String?
+}
+
+model Enquiry {
+  id        Int      @id @default(autoincrement())
+  property  String
+  name      String
+  email     String
+  phone     String
+  interest  String
+  message   String
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+}
