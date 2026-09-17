@@ -541,7 +541,7 @@ className="px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       {/* Footer */}
       <footer className="border-t border-stone-200 bg-white px-6 py-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-stone-500 sm:flex-row">
-          <p>© 2024 Rentora Properties</p>
+          <p>© 2026 Rentora Properties</p>
 
           <p>
             A property technology platform by{" "}
