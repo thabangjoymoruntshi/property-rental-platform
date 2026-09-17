@@ -1,4 +1,8 @@
 import "dotenv/config";
+import net from "node:net";
+
+net.setDefaultAutoSelectFamily(false);
+
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/app/generated/prisma/client";
 
@@ -10,6 +14,7 @@ if (!connectionString) {
 
 const adapter = new PrismaPg({
   connectionString,
+  connectionTimeoutMillis: 30000,
 });
 
 const globalForPrisma = globalThis as unknown as {
